@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grid Layout</title>
+  <style>
+
+    .container::before {
+      content: '';
+      position: absolute;
+      width: 220px; /* Ancho del contenedor */
+      height: 220px; /* Alto del contenedor */
+      border: 5px solid #000; /* Borde negro */
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.5); /* Sombra 3D */
+      z-index: -1; /* Coloca el borde detrás del contenedor */
+      margin: -10px; /* Margen */
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual tamaño */
+      grid-template-rows: 1fr 1fr 1fr; /* Tres filas de igual tamaño */
+      gap: 5px; /* Espacio entre las celdas de la cuadrícula */
+      width: 210px; /* Ancho del contenedor */
+      height: 210px; /* Alto del contenedor */
+      position: relatvie;
+      margin: 20px; /* Margen */
+    }
+
+    .box1 {
+      background-color: green;
+      grid-column: 1 / 3; 
+      grid-row: 1 / 2; 
+      border: 3px solid #000; 
+    }
+
+    .box2 {
+      background-color: red;
+      grid-column: 3 / 3; 
+      grid-row: 1 / 3; 
+      border: 3px solid #000; 
+    }
+
+    .box3 {
+      background-color: red;
+      grid-column: 1 / 2; 
+      grid-row: 2 / 4; 
+      border: 3px solid #000; 
+    }
+    .box4 {
+      background-color: blue;
+      grid-column: 2 / 3; 
+      grid-row: 2 / 3; 
+      border: 3px solid #000;
+    }
+
+    .box5 {
+      background-color: cyan;
+      grid-column: 2 / 4; 
+      grid-row: 3 / 4; 
+      border: 3px solid #000; 
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+  </div>
+</body>
+</html>
